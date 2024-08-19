@@ -15,7 +15,7 @@ namespace Dragablz.Core
     {
         public static IEnumerable<TContainer> Containers<TContainer>(this ItemsControl itemsControl) where TContainer : class
         {
-#if NET45
+#if NET45 || NET46 || NET47 || NET48
             for (var i = 0; i < itemsControl.ItemContainerGenerator.Items.Count; i++)
 #endif
 #if NET40

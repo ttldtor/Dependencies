@@ -2017,8 +2017,8 @@ FOR_EACH_NODE_KIND(SPECIALIZATION)
 
 template <class T, size_t N>
 class PODSmallVector {
-  static_assert(std::is_pod<T>::value,
-                "T is required to be a plain old data type");
+  static_assert(std::is_trivial_v<T>,
+                "T is required to be a trivial data type");
 
   T* First;
   T* Last;

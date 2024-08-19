@@ -38,7 +38,7 @@ namespace Dragablz
 #if NET40
                 OnPropertyChanged("Header");
 #endif
-#if NET45
+#if NET45 || NET46 || NET47 || NET48
                 OnPropertyChanged();
 #endif
             }
@@ -54,7 +54,7 @@ namespace Dragablz
 #if NET40
                 OnPropertyChanged("Content");
 #endif
-#if NET45
+#if NET45 || NET46 || NET47 || NET48
                 OnPropertyChanged();
 #endif
             }
@@ -70,7 +70,7 @@ namespace Dragablz
 #if NET40
                 OnPropertyChanged("IsSelected");
 #endif
-#if NET45
+#if NET45 || NET46 || NET47 || NET48
                 OnPropertyChanged();
 #endif
             }
@@ -81,7 +81,7 @@ namespace Dragablz
 #if NET40
         protected virtual void OnPropertyChanged(string propertyName)
 #endif
-#if NET45
+#if NET45 || NET46 || NET47 || NET48
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
 #endif
         {
